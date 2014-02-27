@@ -19,7 +19,7 @@ namespace NoIceBackgroundMod
 			return "NoIceBackground";
 		}
 		public static int GetVersion() {
-			return 1;
+			return 2;
 		}
 
 		public override void BeforeInvoke (InvocationInfo info) {
