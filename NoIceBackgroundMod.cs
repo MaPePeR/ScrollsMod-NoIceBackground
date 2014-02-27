@@ -28,9 +28,11 @@ namespace NoIceBackgroundMod
 		public override void AfterInvoke (InvocationInfo info, ref object returnValue) {
 			if (returnValue.GetType().Equals(typeof(int))) {
 				if ((int)returnValue == 3) // IceSnow1
-					returnValue =  0;
+					returnValue =  1; //GrassyMountain
 				if ((int)returnValue == 5) //SnowyMountain
-					returnValue =  0;
+					returnValue =  2;//GreenMeadow
+				if ((int)returnValue == 6) //YellowMeadow
+					returnValue = 4;//LavaGrotto
 			}
 			//HardCoded - but yea...
 		}
