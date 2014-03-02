@@ -19,7 +19,7 @@ namespace NoIceBackgroundMod
 			return "NoIceBackground";
 		}
 		public static int GetVersion() {
-			return 2;
+			return 3;
 		}
 
 		public override void BeforeInvoke (InvocationInfo info) {
@@ -27,10 +27,12 @@ namespace NoIceBackgroundMod
 
 		public override void AfterInvoke (InvocationInfo info, ref object returnValue) {
 			if (returnValue.GetType().Equals(typeof(int))) {
+				if ((int)returnValue == 2) //GreenMeadow
+					returnValue = 0; //DeepForest
 				if ((int)returnValue == 3) // IceSnow1
 					returnValue =  1; //GrassyMountain
 				if ((int)returnValue == 5) //SnowyMountain
-					returnValue =  2;//GreenMeadow
+					returnValue =  4;//LavaGrotto
 				if ((int)returnValue == 6) //YellowMeadow
 					returnValue = 4;//LavaGrotto
 			}
